@@ -1,0 +1,241 @@
+// Google Font Imports for non-native fonts //
+// @import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic|La+Belle+Aurore|Share+Tech+Mono);
+
+// Typeface variables //
+$font-sans: 'Istok Web', sans-serif;
+$font-serif: 'Georgia', serif;
+$font-script: 'La Belle Aurore', cursive;
+$font-bitmap: 'Share Tech Mono', monospace;
+
+body {
+	font-size: 18px;
+	font-family: $font-sans;
+	line-height: 1.45;
+}
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 {
+	color: $color-black;
+	font-family: $font-sans;
+	font-weight: 700;
+}
+
+p {
+	font-family: $font-serif;
+}
+
+a {
+	color: $color-primary-shade;
+	text-decoration: underline;
+	&:hover {
+		color: $color-secondary;
+	}
+}
+
+ul {
+    list-style: disc;
+    list-style-image: url(img/icon-bullet.svg);
+    ul {
+	    list-style: circle;
+	    list-style-image: url(img/icon-bullet-secondary.svg);
+	}
+}
+
+// External & Character Quotes //
+blockquote {
+	background: $color-neutral-tint;
+	background-clip: padding-box;
+		-webkit-background-clip: padding-box; 
+  		-moz-background-clip: padding;
+	border: none;
+	color: $color-black-tint;
+	font-size: 18px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 30px 120px 40px 30px;
+	&.dialogue-old-man {
+		background: $color-black;
+		color: $color-white;
+		font-family: $font-bitmap;
+		a {
+			color: $color-primary;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&.dialogue-navi {
+		background: $color-black-tint;
+		border-radius: 30px;
+			-webkit-border-radius: 30px;
+			-moz-border-radius: 30px;
+		color: $color-white;
+		font-family: $font-sans;
+		line-height: 1.6;
+		text-shadow: 2px 2px 1px rgba(0,0,0,.4);
+		a {
+			color: blue;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&.dialogue-red-lions {
+		background: #2233DD;
+		background-image:
+		    linear-gradient(
+		      to bottom right, 
+		      #2233DD, #22E0EE
+		    );
+		box-shadow: inset 0 0 10px 10px $color-white-shade;
+			-webkit-box-shadow: inset 0 0 10px 10px $color-white-shade;
+			-moz-box-shadow: inset 0 0 10px 10px $color-white-shade;
+		color: $color-white;
+		font-family: $font-sans;
+		font-weight: 700;
+		padding: 70px 160px 80px 70px;
+		text-shadow: 1px 2px 0 rgba(0,0,0,.4);
+		a {
+			color: red;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&.dialogue-midna {
+		background: rgba(0,0,0,.65);
+		border: 3px solid $color-primary;
+		box-shadow: inset 0 0 10px $color-black;
+			-webkit-box-shadow: inset 0 0 10px $color-black;
+			-moz-box-shadow: inset 0 0 10px $color-black;
+		color: #9BE7DA;
+		font-family: $font-sans;
+		-webkit-animation: MIDNA-ANIMATION 3s infinite linear;
+		a {
+			color: red;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&.dialogue-fi {
+		background: url('img/bg-dialogue-fi.svg'), url('img/bg-dialogue-fi-2.svg') center, #6F3984;
+		border-radius: 80px 70px 130px 100px;
+			-webkit-border-radius: 100px 120px 160px 140px;
+			-moz-border-radius: 80px 70px 130px 100px;
+		box-shadow: inset 0 0 100px 20px #6F3984, 0 0 10px 10px #6F3984;
+			-webkit-box-shadow: inset 0 0 100px 20px #6F3984, 0 0 10px 10px #6F3984;
+			-moz-box-shadow: inset 0 0 100px 20px #6F3984, 0 0 10px 10px #6F3984;
+		box-sizing: border-box;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		color: $color-primary-tint;
+		font-family: $font-serif;
+		font-weight: 700;
+		line-height: 1.7;
+		margin-left: 30px;
+		margin-right: 30px;
+		padding: 50px 260px 60px 50px;
+		position: relative;
+		text-shadow: -2px 1px 0 rgba(0,0,0,.5);
+		-webkit-animation: FI-ANIMATION 50s infinite linear;
+		&::after {
+			background: transparent url('img/Fi_Artwork.png') no-repeat;
+			background-size: 100%;
+			content:'';
+			height: 200px;
+			margin-top: -100px;
+			position: absolute;
+			     top: 50%;
+			   right: 40px;
+			width: 200px;
+		}
+		a {
+			color: turquoise;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	cite {
+		display: block;
+		font-size: 14px;
+		font-style: italic;
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+}
+
+// Blockquote Animations //
+@-webkit-keyframes MIDNA-ANIMATION {
+	0%, 100% { text-shadow: 2px 2px 1px rgba(0,0,0,.75), 0 0 20px rgba(50,220,255,.1); }
+	50%      { text-shadow: 2px 2px 1px rgba(0,0,0,.75), 0 0 20px rgba(50,220,255,1);  }
+}
+@-webkit-keyframes FI-ANIMATION {
+	from { background-position: 100% 100% }
+	to   { background-position: 0% 0%     }
+}
+
+code {
+	background: $color-white;
+	display: block;
+	font-family: $font-bitmap;
+	overflow: auto;
+	width: 100%;
+}
+
+small {
+	font-family: $font-sans;
+}
+
+.game-title {
+	display: block;
+	margin: 20px 0 30px 0;
+	text-align: center;
+	h1 {
+		font-family: $font-script;
+		font-size: 36px;
+		margin: 0 0 -20px 0;
+	}
+	h2 {
+		border-top: 3px solid $color-black;
+		border-bottom: 3px solid $color-black;
+		display: inline-block;
+		font-family: $font-serif;
+		font-size: 60px;
+		padding: 0 16px;
+		text-transform: uppercase;
+	}
+}
+
+// Copy Editing Styles //
+
+ins {
+	border-bottom: 1px dashed $color-secondary-tint;
+	text-decoration: none;
+	.editor-note {
+
+	}
+	.correction {
+
+	}
+}
+
+del {
+	text-decoration: line-through;
+	.redaction {
+
+	}
+	.correction {
+
+	}
+}

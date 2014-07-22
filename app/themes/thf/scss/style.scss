@@ -11,10 +11,10 @@ Version: 1.0
 /*************
 ** Globals **
 *************/
+@import "palette";
 @import "typography";
 @import "cn-mixins";
-@import "snap";
-
+@import "lib/snap";
 
 /*****************
 ** Base Styles **

@@ -225,7 +225,7 @@ a {
     text-decoration: underline; }
   a:focus {
     outline: thin dotted #333;
-    outline: 5px auto-webkit-focus-ring-color;
+    outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
 img {
@@ -1003,7 +1003,7 @@ select optgroup {
 
 input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
   outline: thin dotted #333;
-  outline: 5px auto-webkit-focus-ring-color;
+  outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
@@ -2052,13 +2052,188 @@ th.visible-print, td.visible-print {
 /*************
 ** Globals **
 *************/
-@import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic|La+Belle+Aurore);
 body {
-  font-size: 16px;
-  font-family: 'Istok Web', sans-serif; }
+  font-size: 18px;
+  font-family: 'Istok Web', sans-serif;
+  line-height: 1.45; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: #1D1D26;
+  font-family: 'Istok Web', sans-serif;
+  font-weight: 700; }
 
 p {
   font-family: 'Georgia', serif; }
+
+a {
+  color: #996C2E;
+  text-decoration: underline; }
+  a:hover {
+    color: #2E4D30; }
+
+ul {
+  list-style: disc;
+  list-style-image: url(img/icon-bullet.svg); }
+  ul ul {
+    list-style: circle;
+    list-style-image: url(img/icon-bullet-secondary.svg); }
+
+blockquote {
+  background: #EBE9E1;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  border: none;
+  color: #615766;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 30px 120px 40px 30px; }
+  blockquote.dialogue-old-man {
+    background: #1D1D26;
+    color: #FAF9F5;
+    font-family: 'Share Tech Mono', monospace; }
+    blockquote.dialogue-old-man a {
+      color: #C79F5A;
+      text-decoration: none; }
+      blockquote.dialogue-old-man a:hover {
+        text-decoration: underline; }
+  blockquote.dialogue-navi {
+    background: #615766;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    color: #FAF9F5;
+    font-family: 'Istok Web', sans-serif;
+    line-height: 1.6;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4); }
+    blockquote.dialogue-navi a {
+      color: blue;
+      text-decoration: none; }
+      blockquote.dialogue-navi a:hover {
+        text-decoration: underline; }
+  blockquote.dialogue-red-lions {
+    background: #2233DD;
+    background-image: linear-gradient(to bottom right, #2233DD, #22E0EE);
+    box-shadow: inset 0 0 10px 10px #F3F2ED;
+    -webkit-box-shadow: inset 0 0 10px 10px #F3F2ED;
+    -moz-box-shadow: inset 0 0 10px 10px #F3F2ED;
+    color: #FAF9F5;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 700;
+    padding: 70px 160px 80px 70px;
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.4); }
+    blockquote.dialogue-red-lions a {
+      color: red;
+      text-decoration: none; }
+      blockquote.dialogue-red-lions a:hover {
+        text-decoration: underline; }
+  blockquote.dialogue-midna {
+    background: rgba(0, 0, 0, 0.65);
+    border: 3px solid #C79F5A;
+    box-shadow: inset 0 0 10px #1D1D26;
+    -webkit-box-shadow: inset 0 0 10px #1D1D26;
+    -moz-box-shadow: inset 0 0 10px #1D1D26;
+    color: #9BE7DA;
+    font-family: 'Istok Web', sans-serif;
+    -webkit-animation: MIDNA-ANIMATION 3s infinite linear; }
+    blockquote.dialogue-midna a {
+      color: red;
+      text-decoration: none; }
+      blockquote.dialogue-midna a:hover {
+        text-decoration: underline; }
+  blockquote.dialogue-fi {
+    background: url('img/bg-dialogue-fi.svg'), url('img/bg-dialogue-fi-2.svg') center, #6F3984;
+    border-radius: 80px 70px 130px 100px;
+    -webkit-border-radius: 100px 120px 160px 140px;
+    -moz-border-radius: 80px 70px 130px 100px;
+    box-shadow: inset 0 0 100px 20px #6F3984, 0 0 10px 10px #6F3984;
+    -webkit-box-shadow: inset 0 0 100px 20px #6F3984, 0 0 10px 10px #6F3984;
+    -moz-box-shadow: inset 0 0 100px 20px #6F3984, 0 0 10px 10px #6F3984;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    color: #D9CEAD;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    line-height: 1.7;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 50px 260px 60px 50px;
+    position: relative;
+    text-shadow: -2px 1px 0 rgba(0, 0, 0, 0.5);
+    -webkit-animation: FI-ANIMATION 50s infinite linear; }
+    blockquote.dialogue-fi::after {
+      background: transparent url('img/Fi_Artwork.png') no-repeat;
+      background-size: 100%;
+      content: '';
+      height: 200px;
+      margin-top: -100px;
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      width: 200px; }
+    blockquote.dialogue-fi a {
+      color: turquoise;
+      text-decoration: none; }
+      blockquote.dialogue-fi a:hover {
+        text-decoration: underline; }
+  blockquote cite {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 20px;
+    margin-left: 20px; }
+
+@-webkit-keyframes MIDNA-ANIMATION {
+  0%, 100% {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75), 0 0 20px rgba(50, 220, 255, 0.1); }
+
+  50% {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75), 0 0 20px #32dcff; } }
+
+@-webkit-keyframes FI-ANIMATION {
+  from {
+    background-position: 100% 100%; }
+
+  to {
+    background-position: 0% 0%; } }
+
+code {
+  background: #FAF9F5;
+  display: block;
+  font-family: 'Share Tech Mono', monospace;
+  overflow: auto;
+  width: 100%; }
+
+small {
+  font-family: 'Istok Web', sans-serif; }
+
+.game-title {
+  display: block;
+  margin: 20px 0 30px 0;
+  text-align: center; }
+  .game-title h1 {
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 36px;
+    margin: 0 0 -20px 0; }
+  .game-title h2 {
+    border-top: 3px solid #1D1D26;
+    border-bottom: 3px solid #1D1D26;
+    display: inline-block;
+    font-family: 'Georgia', serif;
+    font-size: 60px;
+    padding: 0 16px;
+    text-transform: uppercase; }
+
+ins {
+  border-bottom: 1px dashed #869973;
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
 
 /* CN Mixins */
 /*****************************************************************************
@@ -2077,8 +2252,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
 
 .snap-content {
   position: absolute;

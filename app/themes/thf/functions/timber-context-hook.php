@@ -35,6 +35,8 @@ function add_to_context($data) {
 	/** Header / Footer hooks **/
 	$data['wp_head'] = WPHelper::function_wrapper( 'wp_head()' );
 	$data['wp_footer'] = WPHelper::function_wrapper( 'wp_footer()' );
+
+	$data['wp_title'] = bloginfo('name');
     
 	return $data;
 }
